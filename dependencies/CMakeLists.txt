@@ -13,7 +13,7 @@ endif()
 FetchContent_Declare(
   imgui
   GIT_REPOSITORY "https://github.com/eliasdaler/imgui"
-  GIT_TAG bec4c2fe4c3456c0dafb292da2883c9cf2bc8313
+  GIT_TAG 6facc66e30e3971437c22f0646d5540bc059479c
 )
 
 FetchContent_Declare(

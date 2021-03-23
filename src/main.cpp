@@ -8,7 +8,7 @@
 #include <imgui_impl_sdl.h>
 #include <stdio.h>
 
-int main() {
+int main(int argc, char** args) {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) !=
         0) {
         printf("Error: %s\n", SDL_GetError());
