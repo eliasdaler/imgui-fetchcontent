@@ -1,11 +1,13 @@
 // Mostly copied from Dear ImGui's SDL OpenGL3 example, but with lots of stuff
 // removed for brevity - no explanations of basic things + gl3w hardcoded
 
-#include <GL/gl3w.h>
+#include <GL/glew.h>
 #include <SDL.h>
+
 #include <imgui.h>
 #include <imgui_impl_opengl3.h>
 #include <imgui_impl_sdl.h>
+
 #include <stdio.h>
 
 int main(int argc, char** args) {
@@ -50,7 +52,7 @@ int main(int argc, char** args) {
     SDL_GL_MakeCurrent(window, gl_context);
     SDL_GL_SetSwapInterval(1);  // Enable vsync
 
-    bool err = gl3wInit() != 0;
+    bool err = glewInit() != GLEW_OK;
     if (err) {
         fprintf(stderr, "Failed to initialize OpenGL loader!\n");
         return 1;
