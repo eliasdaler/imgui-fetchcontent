@@ -43,7 +43,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(imgui)
 
-add_library(imgui_sdl
+# It's possible to make imgui_sdl a shared library,
+# but you'll need to set IMGUI_API to dllimport/dllexport
+# on Windows, which is pretty complex
+add_library(imgui_sdl STATIC
   "${imgui_SOURCE_DIR}/imgui.cpp"
   "${imgui_SOURCE_DIR}/imgui_draw.cpp"
   "${imgui_SOURCE_DIR}/imgui_tables.cpp"

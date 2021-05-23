@@ -14,6 +14,7 @@ if(WIN32)
     add_custom_command(TARGET imgui-example POST_BUILD
       COMMAND ${CMAKE_COMMAND} -E copy_if_different
           $<TARGET_FILE:SDL2>
+          $<TARGET_FILE:libglew_shared>
           $<TARGET_FILE_DIR:imgui-example>)
   endif()
 endif()
